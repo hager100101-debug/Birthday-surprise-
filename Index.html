@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8efeb">
+<title>عالم صغير معمول مخصوص ليك ❤️</title>
+<style>
+:root{--bg:#fbf5f1;--paper:#fffdfa;--rose:#d9a7aa;--deep:#744e55;--soft:#f1dfe0;--ink:#60464b;--muted:#9b7d7d}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at top,#fff 0,#fbf5f1 55%,#f5e8e5 100%);color:var(--ink);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:720px;margin:auto;padding:24px 17px 50px}
+.hero{text-align:center;padding:28px 12px 20px}
+.kicker{letter-spacing:3px;font:12px Georgia,serif;color:var(--muted)}
+h1{font-family:Georgia,serif;font-size:clamp(32px,8vw,52px);line-height:1.15;color:var(--deep);margin:14px 0}
+.subtitle{font-size:16px;line-height:2;color:var(--muted);margin:0 auto;max-width:480px}
+.photo{border:1px dashed #d7aeb0;border-radius:20px;background:#fffaf8;min-height:145px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;margin:18px auto;max-width:480px}
+.photo img{width:100%;height:100%;max-height:290px;object-fit:cover;display:block}
+.photo .placeholder{padding:22px;text-align:center;color:#a77f83;line-height:2}
+.photo input{display:block;position:relative;opacity:1;width:calc(100% - 28px);height:auto;margin:0 auto 14px;padding:10px;background:#fff;border:1px solid #e6c8c8;border-radius:12px;color:#744e55;font:13px Tahoma,Arial,sans-serif;z-index:2}.photo .placeholder{width:100%}.photo .status{display:block;font-size:12px;color:#744e55;padding:0 12px 12px;text-align:center}
+.section-title{text-align:center;font-size:22px;color:var(--deep);margin:32px 0 8px}
+.hint{text-align:center;color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 18px}
+.envelopes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.env{border:1px solid #e6c8c8;border-radius:18px;background:linear-gradient(145deg,#fffdfb,#f7e8e6);padding:20px 10px 17px;min-height:145px;cursor:pointer;color:var(--deep);box-shadow:0 5px 16px #8b5d5d12;transition:transform .18s,box-shadow .18s}
+.env:active{transform:scale(.97)}
+.env .emoji{font-size:35px;display:block;margin-bottom:9px}
+.env strong{font-size:15px;display:block}
+.env small{display:block;color:var(--muted);margin-top:7px;font-size:11px}
+.env.opened{background:#f0e4df;border-style:solid}
+.progress{text-align:center;color:var(--muted);font-size:13px;margin:18px 0}
+.bar{height:7px;background:#ead8d6;border-radius:20px;overflow:hidden;max-width:340px;margin:9px auto}
+.bar span{height:100%;display:block;width:0;background:#bd858b;transition:width .3s}
+.final{display:none;text-align:center;margin:25px 0 10px;padding:24px 17px;border-radius:22px;background:linear-gradient(145deg,#f5e4e2,#fffaf7);border:1px solid #dfbabc;animation:appear .7s ease}
+.final.show{display:block}
+.final h2{font:30px Georgia,serif;color:var(--deep);margin:0 0 13px}
+.final p{line-height:2.1;margin:0}
+.note{text-align:center;color:#ad8d8e;font:italic 13px Georgia,serif;margin-top:28px}
+.modal{display:none;position:fixed;inset:0;background:#3421269c;z-index:5;padding:18px;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.dialog{background:var(--paper);border-radius:24px;max-width:520px;width:100%;padding:26px 21px;max-height:85vh;overflow:auto;position:relative;text-align:center;box-shadow:0 20px 70px #24111655}
+.close{position:absolute;left:14px;top:10px;border:0;background:transparent;font-size:27px;color:var(--muted);cursor:pointer}
+.dialog .big{font-size:39px}
+.dialog h3{color:var(--deep);font-size:23px;margin:9px 0}
+.dialog p{white-space:pre-line;line-height:2.15;font-size:16px;margin:12px 0 20px}
+.next{border:0;background:var(--deep);color:white;border-radius:30px;padding:12px 23px;font-size:14px;cursor:pointer}
+.edit{margin:28px auto 0;max-width:480px;padding:16px;border:1px solid #ead4d2;border-radius:18px;background:#fffaf8}
+.edit summary{color:var(--deep);font-weight:bold;cursor:pointer}
+.edit p{font-size:12px;color:var(--muted);line-height:1.8}
+.edit button{border:0;background:#815c62;color:#fff;border-radius:25px;padding:11px 16px;font-size:13px;cursor:pointer;width:100%}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:380px){.envelopes{gap:9px}.env{padding:16px 7px;min-height:135px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">A LITTLE WORLD • MADE JUST FOR YOU</div>
+    <h1>كل سنة وأنت<br>أجمل حكاية في أيامي ❤️</h1>
+    <p class="subtitle">حضّرتلك شوية مفاجآت صغيرة… كل ظرف جواه حتة من قلبي. افتحهم واحدة واحدة، وفي الآخر مستنياك مفاجأة أخيرة.</p>
+    <label class="photo" id="coverBox">
+      <span class="placeholder">♡<br>اختاري صورة الغلاف من الزر بالأسفل</span>
+      <input type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-label="اختيار صورة الغلاف" onchange="loadPhoto(event,'coverBox')">
+      <span class="status" aria-live="polite">لم يتم اختيار صورة بعد</span>
+    </label>
+  </header>
+
+  <h2 class="section-title">أظرف معمولة مخصوص ليك 💌</h2>
+  <p class="hint">اختار أي ظرف واضغط عليه عشان تعرف اللي جواه.</p>
+  <main class="envelopes" id="envelopes"></main>
+  <div class="progress"><span id="count">لسه مستنيين أول ظرف يتفتح ❤️</span><div class="bar"><span id="bar"></span></div></div>
+
+  <section class="final" id="final">
+    <div style="font-size:38px">🎁❤️</div>
+    <h2>مفاجأة أخيرة…</h2>
+    <label class="photo" id="finalBox">
+      <span class="placeholder">♡<br>اختاري صورة المفاجأة الأخيرة من الزر بالأسفل</span>
+      <input type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-label="اختيار صورة المفاجأة الأخيرة" onchange="loadPhoto(event,'finalBox')">
+      <span class="status" aria-live="polite">لم يتم اختيار صورة بعد</span>
+    </label>
+    <p>لو أقدر أديك حاجة واحدة في عيد ميلادك، هتكون إنك تشوف نفسك بعيني…<br>وتعرف قد إيه أنت شخص جميل وغالي ومحبوب.<br><br>كل سنة وأنت حبيبي، وكل سنة وإحنا بنصنع ذكريات أحلى. ❤️</p>
+  </section>
+
+  <p class="note">made with love, just for you ♡</p>
+
+  <details class="edit">
+    <summary>تجهيز الصور قبل ما تبعتي اللينك</summary>
+    <p>اختاري صور الغلاف والمفاجأة الأخيرة من هنا. بعد إضافة الصور اضغطي «حفظ نسخة بالصور»؛ هيتحمّل ملف HTML جديد فيه صورك، وده الملف اللي ترفعيه على موقع استضافة عشان تطلعي لينك تشاركيه.</p>
+    <button onclick="exportPersonalized()">حفظ نسخة بالصور</button>
+  </details>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="if(event.target===this)closeModal()">
+  <div class="dialog">
+    <button class="close" onclick="closeModal()" aria-label="إغلاق">×</button>
+    <div class="big" id="modalEmoji">💌</div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <button class="next" onclick="closeModal()">رجوع للأظرف ❤️</button>
+  </div>
+</div>
+
+<script>
+const surprises = [
+ {emoji:"❤️",title:"سر صغير عنك",sub:"A reason I love you",text:"بحب فيك تفاصيل يمكن أنت مش واخد بالك منها… بحب طريقتك وضحكتك، وبحب إنك قادر تخلي يوم عادي يبقى مميز لمجرد إنك موجود فيه."},
+ {emoji:"📸",title:"فاكر اللحظة دي؟",sub:"A memory I'll never forget",text:"في ذكرى بينا كل ما بفتكرها بابتسم. نفسي نعيش لحظات شبهها كتير، وتبقى عندنا حكايات أكتر نفتكرها سوا.\n\n[هنا تقدري تضيفي ذكرى خاصة بيكم بعد تنزيل الملف.]"},
+ {emoji:"💗",title:"حاجة يمكن مقلتهاش",sub:"Something I've never told you",text:"يمكن مش بقولك كل مرة قد إيه وجودك بيفرق، بس الحقيقة إنك بقيت جزء جميل من أيامي، وفي حاجات كتير بتبقى أحلى لما أشاركها معاك."},
+ {emoji:"🌷",title:"لو كنا مع بعض دلوقتي",sub:"A day with you",text:"كنت هختار نقضي يوم كامل سوا من غير خطط ولا مواعيد… نخرج ونتكلم ونضحك، وأفضل مستمتعة بكل لحظة من غير ما أحس بالوقت."},
+ {emoji:"🎂",title:"أمنيتي ليك",sub:"My birthday wish",text:"أتمنى أشوفك بتوصل لكل حاجة نفسك فيها، وتكون أيامك الجاية أحن وأجمل. وأتمنى نفضل نعمل ذكريات حلوة سوا، ويكون لينا نصيب في أيام كتير جميلة."}
+];
+const opened = new Set();
+const envRoot=document.getElementById('envelopes');
+surprises.forEach((s,i)=>{
+ const b=document.createElement('button');
+ b.className='env'; b.type='button'; b.id='env'+i;
+ b.innerHTML=`<span class="emoji">✉️</span><strong>${s.title}</strong><small>${s.sub}</small>`;
+ b.addEventListener('click',()=>openSurprise(i));
+ envRoot.appendChild(b);
+});
+function openSurprise(i){
+ const s=surprises[i]; opened.add(i);
+ document.getElementById('env'+i).classList.add('opened');
+ document.getElementById('env'+i).querySelector('.emoji').textContent='💌';
+ document.getElementById('modalEmoji').textContent=s.emoji;
+ document.getElementById('modalTitle').textContent=s.title;
+ document.getElementById('modalText').textContent=s.text;
+ document.getElementById('modal').classList.add('show');
+ document.getElementById('count').textContent=`فتحت ${opened.size} من 5 مفاجآت`;
+ document.getElementById('bar').style.width=(opened.size/5*100)+'%';
+ if(opened.size===5){document.getElementById('final').classList.add('show');}
+}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function loadPhoto(event,boxId){
+ const file=event.target.files && event.target.files[0];
+ const box=document.getElementById(boxId);
+ const status=box.querySelector('.status');
+ if(!file){if(status)status.textContent='لم يتم اختيار صورة';return;}
+ if(!file.type.startsWith('image/')){if(status)status.textContent='الملف المختار مش صورة. اختاري JPG أو PNG.';return;}
+ if(status)status.textContent='جاري إضافة الصورة…';
+ const reader=new FileReader();
+ reader.onload=()=>{
+  const img=new Image();
+  img.onload=()=>{
+   let old=box.querySelector('img');
+   if(!old){old=document.createElement('img');box.insertBefore(old,box.querySelector('input'));}
+   old.src=reader.result;
+   const ph=box.querySelector('.placeholder'); if(ph)ph.style.display='none';
+   if(status)status.textContent='✓ الصورة اتضافت بنجاح';
+  };
+  img.onerror=()=>{if(status)status.textContent='الصورة دي مش مدعومة. جرّبي Screenshot أو احفظيها بصيغة JPG.';};
+  img.src=reader.result;
+ };
+ reader.onerror=()=>{if(status)status.textContent='حصلت مشكلة في قراءة الصورة. جرّبي صورة تانية.';};
+ reader.readAsDataURL(file);
+}
+function exportPersonalized(){
+ const clone=document.documentElement.cloneNode(true);
+ // Embed any selected photos into the exported HTML.
+ ['coverBox','finalBox'].forEach(id=>{
+   const original=document.getElementById(id);
+   const cloned=clone.querySelector('#'+id);
+   if(!original||!cloned)return;
+   const img=original.querySelector('img');
+   if(img){
+     let ci=cloned.querySelector('img');
+     if(!ci){ci=document.createElement('img');cloned.insertBefore(ci,cloned.firstChild);}
+     ci.setAttribute('src',img.src);
+     const ph=cloned.querySelector('.placeholder'); if(ph)ph.remove();
+     const inp=cloned.querySelector('input'); if(inp)inp.remove();
+     const status=cloned.querySelector('.status'); if(status)status.remove();
+   }
+ });
+ const edit=clone.querySelector('.edit'); if(edit)edit.remove();
+ const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement('a');a.href=url;a.download='birthday-surprise.html';a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+</script>
+</body>
+</html>
